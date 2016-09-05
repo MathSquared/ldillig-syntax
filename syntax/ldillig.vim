@@ -6,7 +6,7 @@ elseif exists("b:current_syntax")
 endif
 
 " Identifiers and basic syntax elements
-syn match ldilligId "\<[a-zA-Z][a-zA-Z_0-9]*\>"
+syn match ldilligId "\<[a-zA-Z_][a-zA-Z_0-9]*\>"
 syn match ldilligInt "\<[0-9]\+\>"
 syn region ldilligString start=+"+ end=+"+
 
@@ -20,7 +20,7 @@ syn keyword ldilligTest isNil
 syn keyword ldilligSpecial Nil
 
 " Function
-syn match ldilligFunction "\%(\%(fun\)\s*\)\@<=\%(\h[a-zA-Z][a-zA-Z_0-9]*\|[a-zA-Z]\)"
+syn match ldilligFunction "\%(\%(fun\)\s*\)\@<=\%(\h[a-zA-Z_][a-zA-Z_0-9]*\|[a-zA-Z]\)"
 
 " Nested comments
 syn region ldilligComment start="(\*" end="\*)" contains=ldilligComment
