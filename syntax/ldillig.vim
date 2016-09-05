@@ -13,9 +13,10 @@ syn region ldilligString start=+"+ end=+"+
 syn match ldilligOperator "[-#!@*/+&|=<>]\|\(<\)>\|<=\|>="
 
 " All keywords
-syn keyword ldilligStatement let in fun with lambda isNil
+syn keyword ldilligStatement let in fun with lambda
 syn keyword ldilligConditional if then else
 syn keyword ldilligIo print readInt readString
+syn keyword ldilligTest isNil
 syn keyword ldilligSpecial Nil
 
 " Function
@@ -38,7 +39,8 @@ if version >= 508 || !exists("did_ldillig_syntax_inits")
     HiLink ldilligOperator Operator
     HiLink ldilligStatement Statement
     HiLink ldilligConditional Conditional
-    HiLink ldilligIo Statement
+    HiLink ldilligIo Function
+    HiLink ldilligTest Function
     HiLink ldilligSpecial Boolean
     HiLink ldilligFunction Function
     HiLink ldilligComment Comment
